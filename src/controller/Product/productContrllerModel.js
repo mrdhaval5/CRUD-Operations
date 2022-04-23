@@ -3,6 +3,7 @@ const async = require("hbs/lib/async");
 const myProduct = require("./productControllerSchema");
 
 const addproduct = async(data) =>{
+    // console.log(data);
     return new Promise(async(resolve,reject)=>{
         await new myProduct(data).save()
         .then(result=>resolve(result))
@@ -35,7 +36,7 @@ const readsproduct = async(_id)=>{
 
 const updateproduct = async(_id)=>{
     return new Promise(async(resolve,reject)=>{
-        await myProduct.findByIdAndUpdate({_id:_id},{pname:"mi"},{new:true})
+        await myProduct.findByIdAndUpdate({_id:_id},{pname:"Nokia"},{new:true})
         .then(result=>resolve(result))
         .catch(error=>reject(error))
     });
