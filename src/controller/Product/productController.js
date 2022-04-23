@@ -3,7 +3,7 @@ const Product = require("../../routers/APIRouter");
 const ProductModel = require("./productContrllerModel");
 
 const addProduct = async(req,res)=>{
-    const data = await ProductModel.addproduct();
+    const data = await ProductModel.addproduct(req.body);
     res.send(data);
 }
 
